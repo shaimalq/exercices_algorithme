@@ -1,0 +1,188 @@
+ex #11
+
+algorithme signe
+variables
+	A,B: entier
+debut
+ecrire ("saisir la valeur de A")
+lire (A)
+ecrire ("saisir la valeur de B")
+lire (B)
+si A*B >0 alors
+ecrire ("A et B meme signe ")
+sinon
+ecrire ("A et B signe different")
+fin si
+fin
+
+ex #12
+
+algorithme  echange-cond
+variables
+	A,B,C,D: entier
+debut
+ecrire ("saisir la valeur de A")
+lire (A)
+ecrire ("saisir la valeur de B")
+lire (B)
+si A*B >0  alors
+c== A
+A== B
+B== A
+sinon
+C== A+B
+D== A*B
+A== C
+B== D
+fin si
+ecrire ("la nouvelle  valeur de A est",A)
+ecrire ("la nouvelle  valeur de B est",B)
+fin si 
+fin 
+
+ex #13
+
+algoriithme facture
+variables
+	n: entier
+	f:reel
+debut
+ecrire ("saisir le nombre de copies")
+lire (n)
+si n <= 10 alors
+f== n * 0,30
+sinon
+si n <=30
+f== 10*0,30+(n-10)*0,25
+sinon
+f==10*0,30+(n-30)*0,20+20*0,25
+ecrire("le prix des copies est",f)
+fin si 
+fin si
+fin
+
+
+ex #14
+
+algoriithme enfant-categorie
+variables
+	n: entier
+	
+debut
+
+ecrire ("saisir l'age d'enfant")
+lire (n)
+si n<= 6 et n<= 7 alors
+	ecrire(" poussin")
+sinon
+	si n>= 8 et n<=9 alors
+	ecrire("pupille")
+sinon
+	si n>=10 et n<=11  alors
+	ecrire(" minime")
+sinon
+	ecrire(" cadet")
+fin si
+fin si
+fin si
+fin
+
+ex # 17
+
+algorithme impot
+variables
+	age:entier
+	sexe:chaine de caractere
+debut
+	ecrire("entrer l'age d'habitant")
+	lire(age)
+	ecrire("entrer le sexe d'habitant")
+	lire(sexe)
+si (age> =20 et sexe="homme" ou age>=18 et age<= 35 et sexe="femme")
+	ecrire ("habitant impossable")
+sinon
+	ecrire ("habitant  non impossable")
+fin si
+fin
+
+ex # 19
+
+algorithme nbr-jours
+variables
+	mois :chaine de caractere
+debut
+	ecrire("entrer un mois")
+	lire(mois)
+cas "mois" vaut
+	"janvier":ecrire("31 jours")
+	"fevrier":ecrire("28 ou 29 jours")
+	"mars":ecrire("31 jours")
+	"avril":ecrire("30 jours")
+	"mai":ecrire("31 jours")
+	"juin":ecrire("30 jours")
+	"juillet":ecrire("31 jours")
+	"aout":ecrire("31 jours")
+	"septembre":ecrire("30 jours")
+	"octobre":ecrire("31 jours")
+	"novembre":ecrire("30 jours")
+	"decembre":ecrire("31 jours")
+sinon
+	ecrire("nom de mois pas correct")
+fin cas 
+fin
+
+ex # 20
+
+algorithme operation
+variables
+	A,B:entier
+	op:caractere
+debut
+ecrire ("saisir la valeur de A")
+lire (A)
+ecrire ("saisir la valeur de B")
+lire (B)
+ecrire ("entrer l'operateur")
+lire (op)
+
+cas op vaut
+"+" :ecrire("A+B=",A+B)
+"-" :ecrire("A-B=",A-B)
+"*" :ecrire("A*B=",A*B)
+"/" :si B<> 0 alors
+	ecrire("A/B=",A/B)
+sinon
+	ecrire("la division par 0 impossible")
+fin si
+
+sinon
+	ecrire(l'operateur est incorrect")
+fin cas 
+fin
+
+
+ex # 25
+
+algorithme factoriel
+variables
+	n,i:entier
+	f:reel
+debut
+	ecrire("entrer un nombre")
+	lire(n)
+si n>0 alors
+	f== 1
+pour i== 1 a n pas 1 faire
+	f== f*i
+fin pour
+	ecrire("la factoriel est:",f)
+sinon
+	si n=0 alors
+	ecrire("la factoriel est:1")
+sinon
+	ecrire("entrer un nombre positif:")
+fin si
+fin si
+fin
+
+
